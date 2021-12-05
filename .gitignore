@@ -1,0 +1,17 @@
+# ignore everything by default
+
+*/**
+
+!.gitignore
+
+!git/*
+
+!i3/config
+
+!nvim/*
+
+!polybar/*
+!rofi/*
+
+!alacritty.yml
+!redshift.conf

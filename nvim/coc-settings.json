@@ -1,0 +1,79 @@
+{
+  "coc.preferences.useQuickfixForLocations": true,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "lua",
+    "vim",
+    "dart",
+    "jsonc",
+    "rust",
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact"
+  ],
+  "cSpell.enabledLanguageIds": [
+    "dart",
+    "go",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "jsonc",
+    "markdown",
+    "plaintext",
+    "ruby",
+    "rust",
+    "typescript",
+    "typescriptreact",
+    "yml",
+    "vim"
+  ],
+  "codeLens.enable": true,
+  "diagnostic.errorSign": ">>",
+  "diagnostic.warningSign": ">>",
+  "eslint.autoFixOnSave": true,
+  "rust-analyzer.checkOnSave.command": "clippy",
+  "rust-analyzer.inlayHints.chainingHintsSeparator": "‣",
+  "rust-analyzer.inlayHints.typeHintsSeparator": "‣",
+  "rust-analyzer.updates.prompt": false,
+  "snippets.ultisnips.directories": [
+    "ultisnips",
+    "ultisnips/gen"
+  ],
+  "solargraph.commandPath": "/home/koka/.rbenv/shims/solargraph",
+  "solargraph.checkGemVersion": true,
+  "solargraph.transport": "stdio",
+  "solargraph.completion": true,
+  "solargraph.definitions": true,
+  "solargraph.diagnostics": true,
+  "solargraph.formatting": true,
+  "solargraph.hover": true,
+  "solargraph.references": true,
+  "solargraph.symbols": true,
+  "suggest.floatEnable": true,
+  "suggest.enablePreview": true,
+  "suggest.echodocSupport": true,
+  "languageserver": {
+    "haskell": {
+      "command": "haskell-language-server-wrapper",
+      "args": [
+        "--lsp"
+      ],
+      "rootPatterns": [
+        "*.cabal",
+        "stack.yaml",
+        "cabal.project",
+        "package.yaml",
+        "hie.yaml"
+      ],
+      "filetypes": [
+        "haskell",
+        "lhaskell"
+      ],
+      "initializationOptions": {
+        "languageServerHaskell": {
+          "hlintOn": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+[user]
+    name = koka
+    email = koka.code@gmail.com
+    signingkey = FBCA28DB3AAD69A9C3D2DB162614F77BB077D125
+[alias]
+    br = branch
+    dt = difftool
+    mt = mergetool
+    last = log -1 HEAD
+[color]
+    ui = auto
+    diff = auto
+    status = auto
+    branch = auto
+[core]
+    editor = /usr/bin/nvim
+    fileMode = false
+    autocrlf = false
+    pager = delta
+[delta]
+    features = line-numbers decorations
+    line-numbers = true
+    syntax-theme = gruvbox-dark
+[log]
+    date = iso
+[mergetool]
+    keepBackup = false
+[merge]
+    conflictstyle = diff3
+    tool = nvimdiff
+[difftool]
+    prompt = true
+[diff]
+    tool = nvimdiff
+    algorithm = histogram
+[credential]
+    helper = store
+[pager]
+    branch = cat
+[fetch]
+    prune = true
+[push]
+    default = simple
+[pull]
+    rebase = false
+[github]
+    user = koka831
+[http]
+    cookiefile = /home/koka/.gitcookies
+[secrets]
+    providers = git secrets --aws-provider
+    patterns = (A3T[A-Z0-9]|AKIA|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{16}
+    patterns = (\"|')?(AWS|aws|Aws)?_?(SECRET|secret|Secret)?_?(ACCESS|access|Access)?_?(KEY|key|Key)(\"|')?\\s*(:|=>|=)\\s*(\"|')?[A-Za-z0-9/\\+=]{40}(\"|')?
+    patterns = (\"|')?(AWS|aws|Aws)?_?(ACCOUNT|account|Account)_?(ID|id|Id)?(\"|')?\\s*(:|=>|=)\\s*(\"|')?[0-9]{4}\\-?[0-9]{4}\\-?[0-9]{4}(\"|')?
+    allowed = AKIAIOSFODNN7EXAMPLE
+    allowed = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+[init]
+    templatedir = /home/koka/.config/git/template/git-secrets
