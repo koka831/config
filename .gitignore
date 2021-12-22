@@ -9,6 +9,12 @@
 !i3/config
 
 !nvim/*
+!nvim/dein/dein.toml
+!nvim/dein/dein_lazy.toml
+!nvim/conf/*
+!nvim/conf/init/*
+!nvim/lua/*
+!nvim/ftplugin/*
 
 !polybar/*
 !rofi/*

@@ -1,0 +1,129 @@
+[[plugins]]
+repo = 'sainnhe/gruvbox-material'
+hook_add = '''
+let g:gruvbox_material_better_performance = 1
+let g:gruvbox_material_palette = 'original'
+let g:gruvbox_material_enable_bold = 1
+let g:gruvbox_material_diagnostic_text_highlight = 1
+let g:gruvbox_material_diagnostic_line_highlight = 1
+'''
+
+[[plugins]]
+repo = 'sheerun/vim-polyglot'
+
+[[plugins]]
+repo = 'nvim-treesitter/nvim-treesitter'
+
+[[plugins]]
+repo = 'nvim-lua/popup.nvim'
+
+[[plugins]]
+repo = 'nvim-lua/plenary.nvim'
+
+[[plugins]]
+repo = 'nvim-telescope/telescope.nvim'
+depends = ['nvim-lua/popup.nvim', 'nvim-lua/plenary.nvim']
+
+[[plugins]]
+repo = 'Yggdroot/indentLine'
+
+[[plugins]]
+repo = 'kyazdani42/nvim-web-devicons'
+
+[[plugins]]
+repo = 'kyazdani42/nvim-tree.lua'
+depends = 'kyazdani42/nvim-web-devicons'
+hook_add = '''
+source $HOME/.config/nvim/conf/nvim-tree.lua.vim
+'''
+
+[[plugins]]
+repo = 'akinsho/nvim-bufferline.lua'
+depends = 'kyazdani42/nvim-web-devicons'
+
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+branch = 'release'
+rev = 'release'
+merged = 0
+hook_add = '''
+source $HOME/.config/nvim/conf/coc.vim
+'''
+
+[[plugins]]
+repo = 'honza/vim-snippets'
+
+[[plugins]]
+repo = 'editorconfig/editorconfig-vim'
+
+[[plugins]]
+repo = 'junegunn/fzf'
+build = './install --all'
+merged = 0
+
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+depends = ['junegunn/fzf']
+on_cmd = [
+  'Files',
+  'ProjectFiles',
+  'Buffers',
+  'BLines',
+  'History',
+  'Tags',
+  'BTags',
+  'GFiles',
+  'Ag',
+]
+hook_add = '''
+source $HOME/.config/nvim/conf/fzf.vim
+'''
+
+[[plugins]]
+repo = 'tpope/vim-dispatch'
+hook_add = '''
+if !exists('g:dispatch_compilers')
+  let g:dispatch_compilers = {}
+endif
+let g:dispatch_compilers['rspec'] = 'rake'
+'''
+
+[[plugins]]
+repo = 'vim-test/vim-test'
+hook_add = '''
+source $HOME/.config/nvim/conf/vim-test.vim
+'''
+
+[[plugins]]
+repo = 'mfussenegger/nvim-dap'
+
+[[plugins]]
+repo = 'rcarriga/nvim-dap-ui'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+hook_add = '''
+source $HOME/.config/nvim/conf/airline.vim
+'''
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+depends = ['vim-airline/vim-airline']
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+hook_add = '''
+source $HOME/.config/nvim/conf/vim-gitgutter.vim
+'''
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'skanehira/gh.vim'
+
+[[plugins]]
+repo = 'tpope/vim-commentary'
+
+[[plugins]]
+repo = 'preservim/tagbar'

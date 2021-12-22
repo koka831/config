@@ -1,0 +1,29 @@
+[[plugins]]
+repo = 'alvan/vim-closetag'
+on_ft = ['html', 'xml', 'javascriptreact', 'typescriptreact', 'typescript', 'javascript']
+hook_add = '''
+let g:closetag_filetypes = 'html,xml,xhtml'
+let g:closetag_xhtml_filetypes = 'xhtml,jsx,tsx'
+'''
+
+[[plugins]]
+repo = 'tpope/vim-rails'
+on_ft = 'ruby'
+hook_add = '''
+source $HOME/.config/nvim/conf/vim-rails.vim
+'''
+
+[[plugins]]
+repo = 'pocke/rbs.vim'
+on_ft = 'rbs'
+
+[[plugins]]
+repo = 'pedrohdz/vim-yaml-folds'
+on_ft = 'yaml'
+
+[[plugins]]
+repo = 'hashivim/vim-terraform'
+on_ft = 'terraform'
+hook_add = '''
+let g:terraform_fmt_on_save = 1
+'''
