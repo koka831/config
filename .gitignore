@@ -13,6 +13,7 @@
 !nvim/dein/dein_lazy.toml
 !nvim/conf/*
 !nvim/conf/init/*
+nvim/conf/init/key.vim
 !nvim/lua/*
 !nvim/ftplugin/*
 
