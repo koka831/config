@@ -49,6 +49,7 @@
   "solargraph.hover": true,
   "solargraph.references": true,
   "solargraph.symbols": true,
+  "sql.database": "postgresql",
   "suggest.floatEnable": true,
   "suggest.enablePreview": true,
   "suggest.echodocSupport": true,
