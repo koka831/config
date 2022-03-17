@@ -41,3 +41,5 @@ solargraph_rails.rb
 
 doc/**/*.html
 .yardoc
+# local coc-settings
+.vim/coc-settings.json

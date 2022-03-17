@@ -28,8 +28,11 @@
     "vim"
   ],
   "codeLens.enable": true,
+  "diagnostic.virtualText": true,
+  "diagnostic.virtualTextCurrentLineOnly": false,
   "diagnostic.errorSign": ">>",
   "diagnostic.warningSign": ">>",
+  "git.enableGutters": false,
   "eslint.autoFixOnSave": true,
   "rust-analyzer.checkOnSave.command": "clippy",
   "rust-analyzer.inlayHints.chainingHintsSeparator": "‣",
@@ -39,6 +42,10 @@
     "ultisnips",
     "ultisnips/gen"
   ],
+  "flutter.sdk.dart-lookup": "fvm dart",
+  "flutter.sdk.flutter-lookup": "fvm flutter",
+  // run analyzer immediately on open folder
+  "flutter.lsp.initialization.onlyAnalyzeProjectsWithOpenFiles": false,
   "solargraph.commandPath": "/home/koka/.rbenv/shims/solargraph",
   "solargraph.checkGemVersion": true,
   "solargraph.transport": "stdio",
@@ -53,28 +60,24 @@
   "suggest.floatEnable": true,
   "suggest.enablePreview": true,
   "suggest.echodocSupport": true,
-  "languageserver": {
-    "haskell": {
-      "command": "haskell-language-server-wrapper",
-      "args": [
-        "--lsp"
-      ],
-      "rootPatterns": [
-        "*.cabal",
-        "stack.yaml",
-        "cabal.project",
-        "package.yaml",
-        "hie.yaml"
-      ],
-      "filetypes": [
-        "haskell",
-        "lhaskell"
-      ],
-      "initializationOptions": {
-        "languageServerHaskell": {
-          "hlintOn": true
-        }
-      }
-    }
-  }
+  "cSpell.userWords": [
+    "Hokenbo",
+    "MVVM",
+    "Quickfix",
+    "RGBO",
+    "Riverpod",
+    "clippy",
+    "datetime",
+    "deeplink",
+    "dotenv",
+    "gruvbox",
+    "hoge",
+    "koka",
+    "postgresql",
+    "pubspec",
+    "repr",
+    "reqwest",
+    "struct",
+    "vite"
+  ]
 }

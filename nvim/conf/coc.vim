@@ -8,6 +8,7 @@ augroup UserCocGroup
       \ 'coc-emoji',
       \ 'coc-eslint',
       \ 'coc-flutter',
+      \ 'coc-git',
       \ 'coc-highlight',
       \ 'coc-json',
       \ 'coc-html',
