@@ -7,8 +7,6 @@ require('nvim-tree').setup {
   }
 }
 
-require('colorizer').setup()
-
 require('nvim-web-devicons').setup {
   default = true,
 }
