@@ -20,19 +20,27 @@
 [delta]
     features = line-numbers decorations
     line-numbers = true
+    navigate = true
     syntax-theme = gruvbox-dark
+    line-numbers-minus-style = "#fb4934"
+    line-numbers-plus-style = "#b8bb26"
+[delta "decorations"]
+    file-style = bold yellow box
+    file-decoration-style = yellow
+    hunk-header-decoration-style = ul
+[interactive]
+    diffFilter = delta --color-only
 [log]
     date = iso
 [mergetool]
     keepBackup = false
 [merge]
     conflictstyle = diff3
-    tool = nvimdiff
 [difftool]
     prompt = true
 [diff]
-    tool = nvimdiff
     algorithm = histogram
+    colorMoved = default
 [credential]
     helper = store
 [pager]
