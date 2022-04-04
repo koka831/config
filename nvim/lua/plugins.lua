@@ -1,17 +1,18 @@
-require('nvim-tree').setup {
+require('nvim-tree').setup({
   diagnostics = {
     enable = true,
   },
   git = {
     ignore = false,
   }
-}
+})
 
-require('nvim-web-devicons').setup {
+require('nvim-web-devicons').setup({
   default = true,
-}
+})
 
-require('telescope').setup {
+local telescope = require('telescope')
+telescope.setup({
   defaults = {
     mappings = {
       i = {
@@ -25,5 +26,11 @@ require('telescope').setup {
       '--column',
       '--smart-case'
     }
+  },
+  extensions = {
+    ['ui-select'] = {
+      require('telescope.themes').get_dropdown({})
+    }
   }
-}
+})
+telescope.load_extension('ui-select')

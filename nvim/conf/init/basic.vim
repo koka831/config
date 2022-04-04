@@ -24,6 +24,8 @@ set foldlevel=99
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
 set inccommand=split
+set pumblend=10
+set winblend=10
 
 if has("patch-8.1.1564")
   " Recently vim can merge signcolumn and number column into one

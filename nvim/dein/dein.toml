@@ -25,6 +25,10 @@ repo = 'nvim-telescope/telescope.nvim'
 depends = ['nvim-lua/popup.nvim', 'nvim-lua/plenary.nvim']
 
 [[plugins]]
+repo = 'nvim-telescope/telescope-ui-select.nvim'
+depends = ['nvim-telescope/telescope.nvim']
+
+[[plugins]]
 repo = 'Yggdroot/indentLine'
 
 [[plugins]]
@@ -40,15 +44,6 @@ source $HOME/.config/nvim/conf/nvim-tree.lua.vim
 [[plugins]]
 repo = 'akinsho/nvim-bufferline.lua'
 depends = 'kyazdani42/nvim-web-devicons'
-
-[[plugins]]
-repo = 'neoclide/coc.nvim'
-branch = 'release'
-rev = 'release'
-merged = 0
-hook_add = '''
-source $HOME/.config/nvim/conf/coc.vim
-'''
 
 [[plugins]]
 repo = 'honza/vim-snippets'
@@ -93,22 +88,6 @@ repo = 'vim-test/vim-test'
 hook_add = '''
 source $HOME/.config/nvim/conf/vim-test.vim
 '''
-
-[[plugins]]
-repo = 'mfussenegger/nvim-dap'
-
-[[plugins]]
-repo = 'rcarriga/nvim-dap-ui'
-
-[[plugins]]
-repo = 'vim-airline/vim-airline'
-hook_add = '''
-source $HOME/.config/nvim/conf/airline.vim
-'''
-
-[[plugins]]
-repo = 'vim-airline/vim-airline-themes'
-depends = ['vim-airline/vim-airline']
 
 [[plugins]]
 repo = 'airblade/vim-gitgutter'

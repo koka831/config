@@ -1,4 +1,4 @@
-require('bufferline').setup {
+require('bufferline').setup({
   options = {
     numbers = 'none',
     separator_style = {'', ''},
@@ -6,11 +6,11 @@ require('bufferline').setup {
     show_buffer_icons = true,
     show_buffer_close_icons = false,
     show_close_icon = false,
-    diagnostics = 'coc',
-    diagnostics_indicator = function(count, level, diagnostics_dict, context)
-      local icon = level:match("error") and " " or " "
+    diagnostics = 'nvim_lsp',
+    diagnostics_indicator = function(count, level, _, _)
+      local icon = level:match("error") and " " or " "
       return " " .. icon .. count
-    end
+    end,
   },
   highlights = {
     buffer_selected = {
@@ -43,6 +43,22 @@ require('bufferline').setup {
       guifg = '#fabd2f',
       gui = 'bold'
     },
+    hint_diagnostic = {
+      guifg = '#b8bb26',
+    },
+    hint_selected = {
+      guibg = '#3c3836',
+      guifg = '#b8bb26',
+      gui = 'bold'
+    },
+    hint_diagnostic_selected = {
+      guibg = '#3c3836',
+      guifg = '#b8bb26',
+      gui = 'bold'
+    },
+    info_diagnostic = {
+      guifg = '#83a598',
+    },
     info_selected = {
       guibg = '#3c3836',
       gui = 'bold'
@@ -53,4 +69,4 @@ require('bufferline').setup {
       gui = 'bold'
     },
   }
-}
+})

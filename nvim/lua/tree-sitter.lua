@@ -1,5 +1,5 @@
-require('nvim-treesitter.configs').setup {
-  ensure_installed = 'all',
+require('nvim-treesitter.configs').setup({
+  ensure_installed = 'maintained',
   highlight = {
     enable = true,
     disable = { 'toml', 'yaml', 'markdown', 'make', 'lua' },
@@ -12,4 +12,4 @@ require('nvim-treesitter.configs').setup {
       'lua'
     },
   },
-}
+})
