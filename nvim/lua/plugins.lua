@@ -1,9 +1,18 @@
 require('nvim-tree').setup({
   diagnostics = {
     enable = true,
+    show_on_dirs = true,
   },
   git = {
     ignore = false,
+  },
+  view = {
+    mappings = {
+      list = {
+        -- set empty action to use scroll action
+        { key = "<C-e>", action = "" }
+      }
+    }
   }
 })
 
