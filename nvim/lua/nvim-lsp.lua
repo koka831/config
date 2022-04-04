@@ -64,6 +64,7 @@ require('lualine').setup({
     theme = 'gruvbox',
     component_separators = '',
     section_separators = '',
+    disabled_filetypes = { 'NvimTree' },
   },
   sections = {
     lualine_a = { 'mode' },
