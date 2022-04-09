@@ -1,0 +1,39 @@
+
+snippet fn "fn name(?) -> ? {}"
+	fn ${1:function_name}($2)${3/..*/ -> /}$3 {
+		${VISUAL}$0
+	}
+
+snippet pfn "pub fn name(?) -> ? {}"
+	pub fn ${1:function_name}($2)${3/..*/ -> /}$3 {
+		${VISUAL}$0
+	}
+
+snippet afn "async fn name(?) -> ? {}"
+	async fn ${1:function_name}($2)${3/..*/ -> /}$3 {
+		${VISUAL}$0
+	}
+
+snippet pafn "pub async fn name(?) -> ? {}"
+	pub async fn ${1:function_name}($2)${3/..*/ -> /}$3 {
+		${VISUAL}$0
+	}
+
+snippet pri "print!(..)" b
+	print!("$1"${2/..*/, /}$2);
+
+snippet pln "println!(..)" b
+	println!("$1"${2/..*/, /}$2);
+
+snippet fmt "format!(..)"
+	format!("$1"${2/..*/, /}$2);
+
+snippet .it ".iter()" i
+	.iter()$0
+
+snippet impl "Struct/Trait implementation" b
+	impl$4 ${1:Type/Trait}${2: for ${3:Type}}${4:<${5:T}>} {
+		${0}
+	}
+
+# vim:ft=snippets:
