@@ -79,6 +79,7 @@ require('lualine').setup({
 -- nvim-cmp
 local cmp = require('cmp')
 require('nvim-autopairs').setup({ check_ts = true })
+require('luasnip.loaders.from_snipmate').lazy_load()
 local cmp_pair = require('nvim-autopairs.completion.cmp')
 cmp.event:on('confirm_done', cmp_pair.on_confirm_done({ map_char = { tex = '' } }))
 cmp.setup({
@@ -88,14 +89,14 @@ cmp.setup({
   },
   snippet = {
     expand = function(args)
-      vim.fn['vsnip#anonymous'](args.body)
+      require('luasnip').lsp_expand(args.body)
     end,
   },
   sources = cmp.config.sources({
     { name = 'buffer' },
     { name = 'nvim_lsp' },
     { name = 'path' },
-    { name = 'vsnip' },
+    { name = 'luasnip' },
   }),
   formatting = {
     format = require('lspkind').cmp_format({

@@ -1,0 +1,48 @@
+[[plugins]]
+repo = 'neovim/nvim-lspconfig'
+
+[[plugins]]
+repo = 'williamboman/nvim-lsp-installer'
+depends = ['neovim/nvim-lspconfig']
+
+[[plugins]]
+repo = 'hrsh7th/nvim-cmp'
+
+[[plugins]]
+repo = 'onsails/lspkind-nvim'
+depends = ['hrsh7th/nvim-cmp']
+
+[[plugins]]
+repo = 'hrsh7th/cmp-nvim-lsp'
+
+[[plugins]]
+repo = 'hrsh7th/cmp-path'
+
+[[plugins]]
+repo = 'hrsh7th/cmp-buffer'
+
+[[plugins]]
+repo = 'L3MON4D3/LuaSnip'
+
+[[plugins]]
+repo = 'saadparwaiz1/cmp_luasnip'
+
+[[plugins]]
+repo = 'nvim-lua/lsp-status.nvim'
+
+[[plugins]]
+repo = 'nvim-lualine/lualine.nvim'
+
+[[plugins]]
+repo = 'arkav/lualine-lsp-progress'
+depends = ['nvim-lualine/lualine.nvim']
+
+[[plugins]]
+repo = 'windwp/nvim-autopairs'
+
+[[plugins]]
+repo = 'simrat39/rust-tools.nvim'
+
+[[plugins]]
+repo = 'akinsho/flutter-tools.nvim'
+depends = ['nvim-lua/plenary.nvim']
