@@ -76,10 +76,13 @@ require('lualine').setup({
   },
 })
 
+require('nvim-autopairs').setup({ check_ts = true })
 -- nvim-cmp
 local cmp = require('cmp')
-require('nvim-autopairs').setup({ check_ts = true })
+local ls = require('luasnip')
+ls.filetype_extend('rust', { 'rust.generated' })
 require('luasnip.loaders.from_snipmate').lazy_load()
+
 local cmp_pair = require('nvim-autopairs.completion.cmp')
 cmp.event:on('confirm_done', cmp_pair.on_confirm_done({ map_char = { tex = '' } }))
 cmp.setup({
@@ -89,7 +92,7 @@ cmp.setup({
   },
   snippet = {
     expand = function(args)
-      require('luasnip').lsp_expand(args.body)
+      ls.lsp_expand(args.body)
     end,
   },
   sources = cmp.config.sources({

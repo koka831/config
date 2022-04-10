@@ -5,6 +5,9 @@ inoremap <C-l> <Right>
 
 inoremap jj <Esc>
 
+imap <silent><expr> <C-y> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<C-y>'
+smap <silent><expr> <C-y> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<C-y>'
+
 noremap <C-_> :Commentary<CR>
 noremap <C-n> :NvimTreeToggle<CR>
 noremap <C-p> :bp<CR>

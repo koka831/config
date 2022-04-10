@@ -46,9 +46,6 @@ repo = 'akinsho/nvim-bufferline.lua'
 depends = 'kyazdani42/nvim-web-devicons'
 
 [[plugins]]
-repo = 'honza/vim-snippets'
-
-[[plugins]]
 repo = 'editorconfig/editorconfig-vim'
 
 [[plugins]]
