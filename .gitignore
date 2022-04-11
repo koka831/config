@@ -9,11 +9,11 @@
 !i3/config
 
 !nvim/*
-!nvim/dein/dein.toml
-!nvim/dein/dein_lazy.toml
+!nvim/dein/*.toml
 !nvim/conf/*
 !nvim/conf/init/*
 nvim/conf/init/key.vim
+!nvim/snippets/*
 !nvim/lua/*
 !nvim/ftplugin/*
 
