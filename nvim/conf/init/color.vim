@@ -6,7 +6,7 @@ augroup UserColorGroup
 
   hi clear CursorLine
   " for rustOperator in floating window
-  highlight Normal ctermbg=none guibg=none
+  highlight Normal ctermbg=none guibg=#282828
   highlight LineNr ctermbg=none guibg=none
   highlight CursorLineNr term=bold cterm=none ctermfg=yellow
   highlight PmenuSel ctermbg=Yellow ctermfg=Black
@@ -44,4 +44,21 @@ augroup UserColorGroup
   highlight link rustTSNamespace Green
   highlight link rustTSFuncMacro Green
   highlight link rustTSConstant Green
+
+  " nvim-notify
+  highlight NotifyERRORBorder guifg=#fb4934
+  highlight NotifyWARNBorder guifg=#fabd2f
+  highlight NotifyINFOBorder guifg=#b8bb26
+  highlight NotifyDEBUGBorder guifg=#928374
+  highlight NotifyTRACEBorder guifg=#83a598
+  highlight NotifyERRORIcon guifg=#fb4934
+  highlight NotifyWARNIcon guifg=#fabd2f
+  highlight NotifyINFOIcon guifg=#b8bb26
+  highlight NotifyDEBUGIcon guifg=#928374
+  highlight NotifyTRACEIcon guifg=#83a598
+  highlight NotifyERRORTitle  guifg=#fb4934
+  highlight NotifyWARNTitle guifg=#fabd2f
+  highlight NotifyINFOTitle guifg=#b8bb26
+  highlight NotifyDEBUGTitle  guifg=#928374
+  highlight NotifyTRACETitle  guifg=#83a598
 augroup END
