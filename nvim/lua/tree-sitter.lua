@@ -12,4 +12,8 @@ require('nvim-treesitter.configs').setup({
       'lua'
     },
   },
+  -- nvim-ts-context-commentstring
+  context_commentstring = {
+    enable = true
+  }
 })
