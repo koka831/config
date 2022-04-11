@@ -3,6 +3,13 @@ require('nvim-tree').setup({
     enable = true,
     show_on_dirs = true,
   },
+  filters = {
+    custom = {
+      '.git',
+      'node_modules',
+      '.cache',
+    }
+  },
   git = {
     ignore = false,
   },
