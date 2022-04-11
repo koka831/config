@@ -15,6 +15,10 @@ repo = 'sheerun/vim-polyglot'
 repo = 'nvim-treesitter/nvim-treesitter'
 
 [[plugins]]
+repo = 'JoosepAlviste/nvim-ts-context-commentstring'
+depends = ['nvim-treesitter/nvim-treesitter']
+
+[[plugins]]
 repo = 'nvim-lua/popup.nvim'
 
 [[plugins]]
@@ -27,6 +31,9 @@ depends = ['nvim-lua/popup.nvim', 'nvim-lua/plenary.nvim']
 [[plugins]]
 repo = 'nvim-telescope/telescope-ui-select.nvim'
 depends = ['nvim-telescope/telescope.nvim']
+
+[[plugins]]
+repo = 'rcarriga/nvim-notify'
 
 [[plugins]]
 repo = 'Yggdroot/indentLine'
