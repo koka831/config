@@ -1,11 +1,10 @@
 require('nvim-tree').setup({
   diagnostics = {
     enable = true,
-    show_on_dirs = true,
+    -- show_on_dirs = true,
   },
   filters = {
     custom = {
-      '.git',
       'node_modules',
       '.cache',
     }

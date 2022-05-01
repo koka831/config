@@ -31,4 +31,5 @@ runtime! conf/init/*.vim
 filetype plugin indent on
 syntax enable
 
+:lua require('impatient')
 :lua require('config')

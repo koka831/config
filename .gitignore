@@ -6,6 +6,8 @@
 
 !git/*
 
+!fontconfig/fonts.conf
+
 !i3/config
 
 !nvim/*
