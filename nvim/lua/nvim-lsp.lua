@@ -1,5 +1,17 @@
+local servers = {
+  'ccls',
+  'eslint',
+  'html',
+  'solargraph',
+  'sumneko_lua',
+  'terraformls',
+  'tsserver',
+  'vimls',
+}
+
 local lsp_installer = require("nvim-lsp-installer")
-lsp_installer.settings({
+lsp_installer.setup({
+    ensure_installed = servers,
     ui = {
         icons = {
             server_installed = "✓",
@@ -14,25 +26,26 @@ local capabilities = require('cmp_nvim_lsp')
   .update_capabilities(vim.lsp.protocol.make_client_capabilities())
 local lsp_status = require('lsp-status')
 capabilities = vim.tbl_extend('keep', capabilities, lsp_status.capabilities)
+local lspconfig = require('lspconfig')
 
-lsp_installer.on_server_ready(function(server)
-  local config = {
+for _, ls in ipairs(servers) do
+  lspconfig[ls].setup({
     capabilities = capabilities,
     on_attach = lsp_status.on_attach,
-  }
+  })
+end
 
-  if server.name == 'sumneko_lua' then
-    config.settings = {
-      Lua = {
-        diagnostics = {
-          globals = { 'vim' },
-        },
-      },
+lspconfig.sumneko_lua.setup({
+  capabilities = capabilities,
+  on_attach = lsp_status.on_attach,
+  settings = {
+    Lua = {
+      diagnostics = {
+        globals = { 'vim' }
+      }
     }
-  end
-
-  server:setup(config)
-end)
+  }
+})
 
 require('rust-tools').setup({
   tools = {
@@ -56,59 +69,4 @@ require('flutter-tools').setup({
       virtual_text_str = '■',
     },
   },
-})
-
--- statusline
-require('lualine').setup({
-  options = {
-    theme = 'gruvbox',
-    component_separators = '',
-    section_separators = '',
-    disabled_filetypes = { 'NvimTree' },
-  },
-  sections = {
-    lualine_a = { 'mode' },
-    lualine_b = { 'branch', 'diff', 'filename' },
-    lualine_c = { { 'lsp_progress', spinner_symbols = { '⠏', '⠛', '⠹', '⢸', '⣰', '⣤', '⣆', '⡇' } } },
-    lualine_x = { 'filetype' },
-    lualine_y = {},
-    lualine_z = { 'location' },
-  },
-})
-
-require('nvim-autopairs').setup({ check_ts = true })
--- nvim-cmp
-local cmp = require('cmp')
-local ls = require('luasnip')
-local types = require('cmp.types')
-ls.filetype_extend('rust', { 'rust.generated' })
-require('luasnip.loaders.from_snipmate').lazy_load()
-
-local cmp_pair = require('nvim-autopairs.completion.cmp')
-cmp.event:on('confirm_done', cmp_pair.on_confirm_done({ map_char = { tex = '' } }))
-cmp.setup({
-  mapping = {
-    ['<C-k>'] = cmp.mapping.scroll_docs(-2),
-    ['<C-j>'] = cmp.mapping.scroll_docs(2),
-    ['<C-n>'] = cmp.mapping.select_next_item({ behavior = types.cmp.SelectBehavior.Insert }),
-    ['<C-p>'] = cmp.mapping.select_prev_item({ behavior = types.cmp.SelectBehavior.Insert }),
-    ['<C-y>'] = cmp.mapping.confirm({ select = false }),
-  },
-  snippet = {
-    expand = function(args)
-      ls.lsp_expand(args.body)
-    end,
-  },
-  sources = cmp.config.sources({
-    { name = 'buffer' },
-    { name = 'nvim_lsp' },
-    { name = 'path' },
-    { name = 'luasnip' },
-  }),
-  formatting = {
-    format = require('lspkind').cmp_format({
-        mode = 'symbol',
-        maxwidth = 50,
-    })
-  }
 })
