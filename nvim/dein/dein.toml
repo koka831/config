@@ -109,25 +109,7 @@ repo = 'JoosepAlviste/nvim-ts-context-commentstring'
 depends = ['nvim-treesitter/nvim-treesitter']
 
 [[plugins]]
-repo = 'rcarriga/nvim-notify'
-
-[[plugins]]
 repo = 'editorconfig/editorconfig-vim'
-
-[[plugins]]
-repo = 'tpope/vim-dispatch'
-hook_add = '''
-if !exists('g:dispatch_compilers')
-  let g:dispatch_compilers = {}
-endif
-let g:dispatch_compilers['rspec'] = 'rake'
-'''
-
-[[plugins]]
-repo = 'vim-test/vim-test'
-hook_add = '''
-source $HOME/.config/nvim/conf/vim-test.vim
-'''
 
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
