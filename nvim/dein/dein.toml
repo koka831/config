@@ -111,6 +111,23 @@ depends = ['hrsh7th/nvim-cmp']
 [[plugins]]
 repo = 'windwp/nvim-autopairs'
 
+# Git
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+hook_add = '''
+source $HOME/.config/nvim/conf/vim-gitgutter.vim
+'''
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'pwntester/octo.nvim'
+depends = [
+  'nvim-telescope/telescope.nvim',
+  'nvim-lua/plenary.nvim',
+  'kyazdani42/nvim-web-devicons'
+]
 # misc
 
 [[plugins]]
@@ -122,12 +139,6 @@ depends = ['nvim-treesitter/nvim-treesitter', 'tpope/vim-commentary']
 
 [[plugins]]
 repo = 'editorconfig/editorconfig-vim'
-
-[[plugins]]
-repo = 'airblade/vim-gitgutter'
-hook_add = '''
-source $HOME/.config/nvim/conf/vim-gitgutter.vim
-'''
 
 [[plugins]]
 repo = 'rrethy/vim-hexokinase'
@@ -143,9 +154,6 @@ let g:Hexokinase_optInPatterns = [
 \     'hsla'
 \ ]
 '''
-
-[[plugins]]
-repo = 'tpope/vim-fugitive'
 
 [[plugins]]
 repo = 'segeljakt/vim-silicon'
