@@ -1,7 +1,16 @@
 # Core
+[[plugins]]
+repo = 'tpope/vim-surround'
+
+[[plugins]]
+repo = 'tpope/vim-commentary'
 
 [[plugins]]
 repo = 'nvim-treesitter/nvim-treesitter'
+
+[[plugins]]
+repo = 'yioneko/nvim-yati'
+depends = ['nvim-treesitter/nvim-treesitter']
 
 [[plugins]]
 repo = 'nvim-lua/popup.nvim'
@@ -87,6 +96,9 @@ repo = 'hrsh7th/cmp-path'
 repo = 'hrsh7th/cmp-buffer'
 
 [[plugins]]
+repo = 'hrsh7th/cmp-nvim-lsp-signature-help'
+
+[[plugins]]
 repo = 'L3MON4D3/LuaSnip'
 
 [[plugins]]
@@ -106,7 +118,7 @@ repo = 'lewis6991/impatient.nvim'
 
 [[plugins]]
 repo = 'JoosepAlviste/nvim-ts-context-commentstring'
-depends = ['nvim-treesitter/nvim-treesitter']
+depends = ['nvim-treesitter/nvim-treesitter', 'tpope/vim-commentary']
 
 [[plugins]]
 repo = 'editorconfig/editorconfig-vim'

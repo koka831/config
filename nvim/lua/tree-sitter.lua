@@ -12,8 +12,14 @@ require('nvim-treesitter.configs').setup({
       'lua'
     },
   },
+  yati = { enable = true },
   -- nvim-ts-context-commentstring
   context_commentstring = {
-    enable = true
+    enable = true,
+    config = {
+      markdown = '# %s',
+      rust = '// %s',
+      vim = '" %s',
+    }
   }
 })

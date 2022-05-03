@@ -8,6 +8,7 @@ inoremap jj <Esc>
 imap <silent><expr> <C-e> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<C-e>'
 smap <silent><expr> <C-e> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<C-e>'
 
+noremap <C-_> :Commentary<CR>
 noremap <C-n> :NvimTreeToggle<CR>
 noremap <C-p> :bp<CR>
 noremap <C-t> :TagbarToggle<CR>
