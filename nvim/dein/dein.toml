@@ -1,3 +1,15 @@
+# Core
+
+[[plugins]]
+repo = 'nvim-treesitter/nvim-treesitter'
+
+[[plugins]]
+repo = 'nvim-lua/popup.nvim'
+
+[[plugins]]
+repo = 'nvim-lua/plenary.nvim'
+
+# UI
 [[plugins]]
 repo = 'sainnhe/gruvbox-material'
 hook_add = '''
@@ -9,23 +21,17 @@ let g:gruvbox_material_diagnostic_line_highlight = 1
 '''
 
 [[plugins]]
-repo = 'lewis6991/impatient.nvim'
-
-[[plugins]]
 repo = 'sheerun/vim-polyglot'
 
 [[plugins]]
-repo = 'nvim-treesitter/nvim-treesitter'
+repo = 'nvim-lua/lsp-status.nvim'
 
 [[plugins]]
-repo = 'JoosepAlviste/nvim-ts-context-commentstring'
-depends = ['nvim-treesitter/nvim-treesitter']
+repo = 'nvim-lualine/lualine.nvim'
 
 [[plugins]]
-repo = 'nvim-lua/popup.nvim'
-
-[[plugins]]
-repo = 'nvim-lua/plenary.nvim'
+repo = 'arkav/lualine-lsp-progress'
+depends = ['nvim-lualine/lualine.nvim']
 
 [[plugins]]
 repo = 'nvim-telescope/telescope.nvim'
@@ -36,15 +42,6 @@ repo = 'nvim-telescope/telescope-ui-select.nvim'
 depends = ['nvim-telescope/telescope.nvim']
 
 [[plugins]]
-repo = 'rcarriga/nvim-notify'
-
-[[plugins]]
-repo = 'Yggdroot/indentLine'
-
-[[plugins]]
-repo = 'kyazdani42/nvim-web-devicons'
-
-[[plugins]]
 repo = 'kyazdani42/nvim-tree.lua'
 depends = 'kyazdani42/nvim-web-devicons'
 hook_add = '''
@@ -52,34 +49,65 @@ source $HOME/.config/nvim/conf/nvim-tree.lua.vim
 '''
 
 [[plugins]]
+repo = 'kyazdani42/nvim-web-devicons'
+
+[[plugins]]
 repo = 'akinsho/nvim-bufferline.lua'
 depends = 'kyazdani42/nvim-web-devicons'
 
 [[plugins]]
+repo = 'Yggdroot/indentLine'
+
+# LSP
+
+[[plugins]]
+repo = 'neovim/nvim-lspconfig'
+
+[[plugins]]
+repo = 'williamboman/nvim-lsp-installer'
+depends = ['neovim/nvim-lspconfig']
+
+# Completion
+
+[[plugins]]
+repo = 'hrsh7th/nvim-cmp'
+
+[[plugins]]
+repo = 'hrsh7th/cmp-nvim-lsp'
+
+[[plugins]]
+repo = 'hrsh7th/cmp-path'
+
+[[plugins]]
+repo = 'hrsh7th/cmp-buffer'
+
+[[plugins]]
+repo = 'L3MON4D3/LuaSnip'
+
+[[plugins]]
+repo = 'saadparwaiz1/cmp_luasnip'
+
+[[plugins]]
+repo = 'onsails/lspkind-nvim'
+depends = ['hrsh7th/nvim-cmp']
+
+[[plugins]]
+repo = 'windwp/nvim-autopairs'
+
+# misc
+
+[[plugins]]
+repo = 'lewis6991/impatient.nvim'
+
+[[plugins]]
+repo = 'JoosepAlviste/nvim-ts-context-commentstring'
+depends = ['nvim-treesitter/nvim-treesitter']
+
+[[plugins]]
+repo = 'rcarriga/nvim-notify'
+
+[[plugins]]
 repo = 'editorconfig/editorconfig-vim'
-
-[[plugins]]
-repo = 'junegunn/fzf'
-build = './install --all'
-merged = 0
-
-[[plugins]]
-repo = 'junegunn/fzf.vim'
-depends = ['junegunn/fzf']
-on_cmd = [
-  'Files',
-  'ProjectFiles',
-  'Buffers',
-  'BLines',
-  'History',
-  'Tags',
-  'BTags',
-  'GFiles',
-  'Ag',
-]
-hook_add = '''
-source $HOME/.config/nvim/conf/fzf.vim
-'''
 
 [[plugins]]
 repo = 'tpope/vim-dispatch'
@@ -121,10 +149,14 @@ let g:Hexokinase_optInPatterns = [
 repo = 'tpope/vim-fugitive'
 
 [[plugins]]
-repo = 'tpope/vim-commentary'
-
-[[plugins]]
 repo = 'segeljakt/vim-silicon'
 hook_add = '''
 source $HOME/.config/nvim/conf/vim-silicon.vim
 '''
+
+[[plugins]]
+repo = 'simrat39/rust-tools.nvim'
+
+[[plugins]]
+repo = 'akinsho/flutter-tools.nvim'
+depends = ['nvim-lua/plenary.nvim']
