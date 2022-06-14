@@ -9,8 +9,12 @@ repo = 'tpope/vim-commentary'
 repo = 'dense-analysis/ale'
 hook_add = '''
 let g:ale_fixers = {
-\   'ruby': ['rubocop']
+\   'ruby': ['rubocop'],
+\   'javascript': ['prettier'],
+\   'typescript': ['prettier'],
+\   'typescriptreact': ['prettier'],
 \}
+let g:ale_fix_on_save = 1
 '''
 
 [[plugins]]
