@@ -25,3 +25,10 @@ require('nvim-tree').setup({
 require('nvim-web-devicons').setup({
   default = true,
 })
+
+require('fidget').setup({
+  text = {
+    spinner = 'dots',
+    done = ''
+  }
+})
