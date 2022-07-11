@@ -45,7 +45,10 @@ lspconfig.sumneko_lua.setup({
 
 require('rust-tools').setup({
   tools = {
+    autoSetHints = true,
     inlay_hints = {
+      only_current_line = true,
+      only_current_line_autocmd = 'CursorHold',
       parameter_hints_prefix = '- ',
       other_hints_prefix = '-> ',
     }
